@@ -1,1 +1,42 @@
-yl
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assistente de IA</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+ 
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Assistente de IA</h1>
+            <div class="escolha-ia">
+                <h2>OpenAI API Key</h2>
+                <input type="password" required>
+            </div>
+            <div class="escolha-ia">
+                <h2>Modelo</h2>
+                <select id="model-select">
+                    <option value="gpt-3.5-turbo">GPT-3.5 Turbo</option>
+                    <option value="gpt-4">GPT-4</option>
+                </select>
+
+            </div>
+            
+        <div class="interaction">
+            
+            <form id="ai-form">
+                <label for="user-input">Faça a sua pergunta :</label>
+                <div id="input-box">
+                   <input type="text" id="user-input" placeholder="Digite sua pergunta..." required>
+                   <button type="submit">Perguntar</button>
+                </div>
+            </form>
+        </div>
+        <div id="response-box" class="response"></div>
+  
+    </div>
+
+    <script src="./script.js"></script>   
+</body>
