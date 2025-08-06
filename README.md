@@ -16,13 +16,13 @@ Um projeto simples de assistente virtual utilizando a API da OpenAI GPT-3.5 com 
 
 ## 📁 Estrutura do Projeto
 
-├── index.html # Página principal com o formulário
+├── index.html 
 
-├── style.css # Estilos da interface
+├── style.css 
 
-├── script.js # Lógica de conexão com a OpenAI
+├── script.js 
 
-└── README.md # Este arquivo
+└── README.md 
 
 ## 🧠 Tecnologias Utilizadas
 - HTML5
