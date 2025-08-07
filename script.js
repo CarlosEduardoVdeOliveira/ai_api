@@ -24,6 +24,7 @@ const fetchApi = async () => {
     toast("API Key inválida. Verifique e tente novamente.", "#f84c4cff");
     return;
   }
+  responseBox.innerHTML = "<span class='loader'></span>";
 
   try {
     const response = await fetch(API_URL, {
@@ -44,6 +45,7 @@ const fetchApi = async () => {
       }),
     });
     const data = await response.json();
+
     if (data.error) {
       toast(data.error.message || "Erro na API", "#f84c4cff");
       responseBox.innerHTML = "Erro ao buscar resposta.";
