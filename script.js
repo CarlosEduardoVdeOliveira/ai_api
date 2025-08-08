@@ -24,7 +24,10 @@ const fetchApi = async () => {
     toast("API Key inválida. Verifique e tente novamente.", "#f84c4cff");
     return;
   }
-  responseBox.innerHTML = "<span class='loader'></span>";
+
+  responseBox.style.display = "flex";
+  responseBox.style.alignItems = "center";
+  responseBox.style.justifyContent = "center";
 
   try {
     const response = await fetch(API_URL, {
@@ -41,7 +44,6 @@ const fetchApi = async () => {
             content: inputUser,
           },
         ],
-        max_tokens: 100,
       }),
     });
     const data = await response.json();
