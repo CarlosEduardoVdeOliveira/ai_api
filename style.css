@@ -136,6 +136,13 @@ button:hover {
   min-height: 80px;
   max-width: 100%;
 }
+
+#history-list {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
 @media screen and (max-width: 670px) {
   .header > .escolha-ia:nth-child(2),
   .header > .escolha-ia:nth-child(3) {
