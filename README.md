@@ -4,7 +4,7 @@ Um projeto simples de assistente virtual utilizando a API da OpenAI GPT-3.5 com 
 
 ## 🖥️ Demonstração
 
-![Demostração do projeto](public/demo.gif)
+![Demostração do projeto](demo.gif)
 
 ## 🚀 Funcionalidades
 
