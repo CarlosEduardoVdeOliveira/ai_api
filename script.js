@@ -18,8 +18,10 @@ const toast = (message, color) => {
 
 // ***Carregar API Key, modelo e histórico
 document.addEventListener("DOMContentLoaded", () => {
-  if (localStorage.getItem("apiKey")) OPENAI_API_KEY.value = localStorage.getItem("apiKey");
-  if (localStorage.getItem("model")) modelSelect.value = localStorage.getItem("model");
+  if (localStorage.getItem("apiKey"))
+    OPENAI_API_KEY.value = localStorage.getItem("apiKey");
+  if (localStorage.getItem("model"))
+    modelSelect.value = localStorage.getItem("model");
   carregarHistorico();
 });
 
@@ -35,7 +37,7 @@ const salvarHistorico = (pergunta, resposta) => {
 const carregarHistorico = () => {
   historyList.innerHTML = "";
   let historico = JSON.parse(localStorage.getItem("historico")) || [];
-  historico.forEach(item => {
+  historico.forEach((item) => {
     let li = document.createElement("li");
     li.textContent = `P: ${item.pergunta} | R: ${item.resposta}`;
     historyList.appendChild(li);
@@ -58,7 +60,7 @@ const fetchApi = async () => {
   localStorage.setItem("model", modelSelectValue);
 
   // **
-  responseBox.innerHTML = `<span class="loader"></span>`;
+  responseBox.innerHTML = "<span class='loader'></span>";
   responseBox.style.display = "flex";
   responseBox.style.alignItems = "center";
   responseBox.style.justifyContent = "center";
