@@ -43,8 +43,27 @@
           </div>
         </form>
       </div>
-      <div id="response-box" class="response"><span class="loader"></span></div>
+
+     <!---***->
+      <div id="response-box" class="response">
+        <span class="loader"></span>
+      </div>
+
+    <-***-->
+      <div
+        style="display:none; text-align:right; margin-top:5px;"
+        id="copy-container"
+      >
+        <button type="button" id="copy-btn">📋 Copiar resposta</button>
+      </div>
+
+      <!--*** Histórico -->
+      <div id="history" style="margin-top:20px;">
+        <h3>Histórico</h3>
+        <ul id="history-list"></ul>
+      </div>
     </div>
+
     <script
       type="text/javascript"
       src="https://cdn.jsdelivr.net/npm/toastify-js"
