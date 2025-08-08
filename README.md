@@ -4,7 +4,7 @@ Um projeto simples de assistente virtual utilizando a API da OpenAI GPT-3.5 com 
 
 ## 🖥️ Demonstração
 
-![Demostração](demo.gif)
+![Demostração](final.gif)
 
 Acesse o link: https://assistente-ai-nine.vercel.app/
 
