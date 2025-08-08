@@ -3,14 +3,18 @@
   padding: 0;
   box-sizing: border-box;
 }
-
+html,
+body {
+  height: 100dvh;
+}
 body {
   font-family: Arial, Helvetica, sans-serif;
   background-color: #f8f9fa;
   display: flex;
-  justify-content: space-between;
-  align-items: center;
   flex-direction: column;
+  min-height: 100vh;
+  align-items: center;
+  justify-content: space-between;
 }
 
 .container {
@@ -21,7 +25,7 @@ body {
   max-width: 600px;
   width: 100%;
   margin-top: 24px;
-  overflow: hidden;
+  flex: 1;
 }
 
 .header {
