@@ -2,6 +2,8 @@ const modelSelect = document.getElementById("model-select");
 const OPENAI_API_KEY = document.getElementById("api-key");
 const form = document.getElementById("ai-form");
 const responseBox = document.getElementById("response-box");
+const btnOpenHistory = document.getElementById("open_history");
+const btnCloseHistory = document.getElementById("close_history");
 const copyBtn = document.getElementById("copy-btn");
 const copyContainer = document.getElementById("copy-container");
 const historyList = document.getElementById("history-list");
@@ -39,10 +41,17 @@ const carregarHistorico = () => {
   let historico = JSON.parse(localStorage.getItem("historico")) || [];
   historico.forEach((item) => {
     let li = document.createElement("li");
-    li.textContent = `P: ${item.pergunta} | R: ${item.resposta}`;
+    li.innerHTML = `P: ${item.pergunta} <br/> R: ${item.resposta}`;
     historyList.appendChild(li);
   });
 };
+
+btnOpenHistory.addEventListener("click", () => {
+  historyList.style.display = "flex"
+});
+btnCloseHistory.addEventListener("click", () => {
+  historyList.style.display = "none"
+});
 
 //***/ Chamada à API
 const fetchApi = async () => {

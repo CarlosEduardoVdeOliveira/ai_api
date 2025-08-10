@@ -15,6 +15,7 @@ body {
   min-height: 100vh;
   align-items: center;
   justify-content: space-between;
+  scroll-behavior: smooth;
 }
 
 .container {
@@ -127,10 +128,23 @@ button {
   align-self: flex-end;
   margin-top: auto;
   line-height: normal;
+  transition: all ease-in-out 0.2s;
 }
 
-button:hover {
+button.button_primary:hover {
   background-color: #007acc;
+}
+.open_history {
+  background-color: #4caf50;
+}
+button.open_history:hover {
+  background-color: #429945;
+}
+.close_history {
+  background-color: #f84c4cff;
+}
+button.close_history:hover {
+  background-color: rgb(224, 61, 61);
 }
 
 .response {
@@ -147,12 +161,34 @@ button:hover {
   min-height: 80px;
   max-width: 100%;
 }
-
-#history-list {
+.group_button {
   display: flex;
+  gap: 12px;
+  padding: 16px;
+  align-items: center;
+  justify-content: center;
+}
+
+#history {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  padding: 16px;
+  line-height: 1.5;
+}
+#history-list {
+  display: none;
   flex-direction: column;
   margin-top: 16px;
   gap: 16px;
+}
+#history-list li {
+  list-style: none;
+  line-height: 1.6;
+  padding-bottom: 16px;
+  border-bottom: 1px solid #81818130;
 }
 
 footer {
