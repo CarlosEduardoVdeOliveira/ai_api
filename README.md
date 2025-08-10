@@ -37,4 +37,4 @@ Acesse o link: https://assistente-ai-nine.vercel.app/
  - Carlos Eduardo Vieira de Oliveira
  - Kaio Ramos Silva
  - Kathleen July Garcia Grizotti
- - Tharliane Sousa da Silva. 
+ - Tharliane Sousa da Silva
