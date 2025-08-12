@@ -39,28 +39,35 @@
               placeholder="Digite sua pergunta..."
               required
             ></textarea>
-            <button type="submit" class="button_primary">Perguntar</button>
+          </div>
+          <div id="button-box">
+            <button type="submit" id="limpar_button" class="primary_button">Limpar</button>
+            <button type="submit" id="perguntar_button" class="primary_button">Perguntar</button>
           </div>
         </form>
       </div>
-
-      <div id="response-box" class="response">
-        <span class="loader"></span>
+      
+      <div id="ia-response">
+        <div id="ia-response-header">
+          <h5>Resposta da IA:</h5>
+          <button type="button" id="copy-btn" class="secundary_button">Copiar</button>
+        </div>
+        <div id="response-box" class="response">
+          <span class="loader"></span>
+        </div>
+  
+        <div
+          style="display: none; text-align: right; margin-top: 5px"
+          id="copy-container"
+        >
       </div>
 
-      <div
-        style="display: none; text-align: right; margin-top: 5px"
-        id="copy-container"
-      >
-        <button type="button" id="copy-btn">📋 Copiar resposta</button>
       </div>
 
       <!--*** Histórico -->
      <div class="group_button">
-       <button id="open_history" class="open_history">Ver histórico</button>
-      <button id="close_history" class="close_history">
-        Fechar histórico
-      </button>
+       <button id="close_history" class="tertiary_button">Fechar histórico</button>
+       <button id="open_history" class="secundary_button">Ver histórico</button>
      </div>
       <div id="history" style="margin-top: 20px">
         <h3>Histórico</h3>

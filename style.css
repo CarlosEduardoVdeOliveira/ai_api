@@ -20,7 +20,7 @@ body {
 
 .container {
   background-color: white;
-  padding: 0 0 30px 0;
+  padding: 0 20px 30px;
   border-radius: 10px;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
   max-width: 600px;
@@ -93,7 +93,6 @@ body {
 
 .interaction {
   background-color: white;
-  padding: 20px;
 }
 
 .interaction label {
@@ -112,6 +111,7 @@ textarea {
   flex: 1;
   resize: none;
   padding: 10px;
+  height: 80px;
   border-radius: 5px;
   border: 1px solid #ccc;
 }
@@ -131,21 +131,42 @@ button {
   transition: all ease-in-out 0.2s;
 }
 
-button.button_primary:hover {
+#button-box {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 10px 0;
+}
+
+.primary_button:hover {
   background-color: #007acc;
 }
-.open_history {
+#open_history {
   background-color: #4caf50;
 }
-button.open_history:hover {
+.secundary_button:hover {
   background-color: #429945;
 }
-.close_history {
+#close_history {
   background-color: #f84c4cff;
 }
-button.close_history:hover {
+.tertiary_button:hover {
   background-color: rgb(224, 61, 61);
 }
+
+#ia-response {
+  padding: 25px 20px;
+  background-color: whitesmoke;
+  border-radius: 10px;
+  min-height: 150px;
+}
+
+#ia-response-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
 
 .response {
   background-color: #ffffff;
@@ -162,11 +183,12 @@ button.close_history:hover {
   max-width: 100%;
 }
 .group_button {
+  margin-top: 40px;
   display: flex;
   gap: 12px;
   padding: 16px;
   align-items: center;
-  justify-content: center;
+  justify-content: space-between;
 }
 
 #history {
