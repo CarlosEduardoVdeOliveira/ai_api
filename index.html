@@ -41,7 +41,7 @@
             ></textarea>
           </div>
           <div id="button-box">
-            <button type="submit" id="limpar_button" class="primary_button">Limpar</button>
+            <button id="limpar_button" class="tertiary_button">Limpar</button>
             <button type="submit" id="perguntar_button" class="primary_button">Perguntar</button>
           </div>
         </form>
@@ -49,7 +49,7 @@
       
       <div id="ia-response">
         <div id="ia-response-header">
-          <h5>Resposta da IA:</h5>
+          <h4>Resposta da IA:</h4>
           <button type="button" id="copy-btn" class="secundary_button">Copiar</button>
         </div>
         <div id="response-box" class="response">
@@ -65,12 +65,14 @@
       </div>
 
       <!--*** Histórico -->
-     <div class="group_button">
-       <button id="close_history" class="tertiary_button">Fechar histórico</button>
-       <button id="open_history" class="secundary_button">Ver histórico</button>
-     </div>
       <div id="history" style="margin-top: 20px">
         <h3>Histórico</h3>
+        <div class="group_button">
+          <div>
+            <button id="close_history" class="tertiary_button" style="display: none;">X</button>
+          </div>
+          <button id="open_history" class="secundary_button">Ver histórico</button>
+        </div>
         <ul id="history-list"></ul>
       </div>
     </div>

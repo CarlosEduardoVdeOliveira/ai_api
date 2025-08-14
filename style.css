@@ -93,18 +93,19 @@ body {
 
 .interaction {
   background-color: white;
+  margin: 40px 0;
 }
 
 .interaction label {
   display: block;
   font-weight: bold;
-  margin-bottom: 10px;
   color: #2c3e50;
 }
 
 #input-box {
   display: flex;
   gap: 10px;
+  margin: 25px 0 10px;
 }
 
 textarea {
@@ -141,13 +142,13 @@ button {
 .primary_button:hover {
   background-color: #007acc;
 }
-#open_history {
+#open_history, .secundary_button {
   background-color: #4caf50;
 }
 .secundary_button:hover {
   background-color: #429945;
 }
-#close_history {
+#close_history, .tertiary_button {
   background-color: #f84c4cff;
 }
 .tertiary_button:hover {
@@ -169,6 +170,7 @@ button {
 
 
 .response {
+  margin: 20px 30px;
   background-color: #ffffff;
   padding: 20px;
   border-left: 5px solid #3399ff;
@@ -182,14 +184,7 @@ button {
   min-height: 80px;
   max-width: 100%;
 }
-.group_button {
-  margin-top: 40px;
-  display: flex;
-  gap: 12px;
-  padding: 16px;
-  align-items: center;
-  justify-content: space-between;
-}
+
 
 #history {
   display: flex;
@@ -200,6 +195,17 @@ button {
   padding: 16px;
   line-height: 1.5;
 }
+
+.group_button {
+  margin-top: 40px;
+  display: flex;
+  gap: 12px;
+  padding: 16px;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+
 #history-list {
   display: none;
   flex-direction: column;

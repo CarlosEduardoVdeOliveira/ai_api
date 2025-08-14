@@ -5,6 +5,7 @@ const responseBox = document.getElementById("response-box");
 const btnOpenHistory = document.getElementById("open_history");
 const btnCloseHistory = document.getElementById("close_history");
 const copyBtn = document.getElementById("copy-btn");
+const clearBtn = document.getElementById("limpar_button");
 const copyContainer = document.getElementById("copy-container");
 const historyList = document.getElementById("history-list");
 const API_URL = "https://api.openai.com/v1/chat/completions";
@@ -47,10 +48,14 @@ const carregarHistorico = () => {
 };
 
 btnOpenHistory.addEventListener("click", () => {
-  historyList.style.display = "flex"
+  historyList.style.display = "flex";
+  btnCloseHistory.style.display = "block";
+  btnOpenHistory.style.display = "none";
 });
 btnCloseHistory.addEventListener("click", () => {
-  historyList.style.display = "none"
+  historyList.style.display = "none";
+  btnOpenHistory.style.display = "block";
+  btnCloseHistory.style.display = "none";
 });
 
 //***/ Chamada à API
@@ -112,6 +117,12 @@ const fetchApi = async () => {
 form.addEventListener("submit", (event) => {
   event.preventDefault();
   fetchApi();
+  form.querySelector("textarea").value = "";
+});
+
+// ***Limpar resposta
+clearBtn.addEventListener("click", () => {
+  form.querySelector("textarea").value = "";
 });
 
 // ***Copiar resposta para clipboard
